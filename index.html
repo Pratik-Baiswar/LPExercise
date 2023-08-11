@@ -112,11 +112,11 @@
               return;
             }
 
-            // const post = data;
+            const post = data;
             const postElement = document.createElement("div");
             postElement.className = "card"; // Apply the 'card' class
             postElement.innerHTML = `
-                            <h2>Title: ${data.Title}</h2>
+                            <h2>Title: ${post.Title}</h2>
                             <p>Year: ${post.Year}</p>
                             <p>Ratings: ${post.Ratings[0].Value}</p>
                             <p>Type: ${post.Type}</p>
