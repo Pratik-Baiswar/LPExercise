@@ -104,16 +104,16 @@
           `https://www.omdbapi.com/?i=tt3896198&apikey=ee1dfade&t=${searchTerm}`
         )
           .then((response) => response.json())
-          .then((data) => {
+          .then((responseData) => {
             dataContainer.innerHTML = ""; // Clear previous results
-            console.log(data);
+            console.log(responseData);
 
-            if (data.length === 0) {
+            if (responseData.length === 0) {
               dataContainer.innerHTML = "<p>No results found.</p>";
               return;
             }
 
-            const post = data;
+            const post = responseData;
             const postElement = document.createElement("div");
             postElement.className = "card"; // Apply the 'card' class
             postElement.innerHTML = `
