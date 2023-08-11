@@ -150,15 +150,7 @@
               }
             };
             const commandData = {
-              text:
-                "Title: " +
-                post.Title +
-                ", Year: " +
-                post.Year +
-                ", Ratings: " +
-                post.Ratings[0].Value +
-                ", Type: " +
-                post.Type,
+              text: "Title: " + post.Title + ", Year: " + post.Year,
             };
             lpTag.agentSDK.command(
               lpTag.agentSDK.cmdNames.write,
