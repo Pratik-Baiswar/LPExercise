@@ -149,7 +149,17 @@
                 console.log("Error occured in notifyWhenDone: " + err);
               }
             };
-            const commandData = { text: "Title:" + post.Title };
+            const commandData = {
+              text:
+                "Title: " +
+                post.Title +
+                ", Year: " +
+                post.Year +
+                ", Ratings: " +
+                post.Ratings +
+                ", Type: " +
+                post.Type,
+            };
             lpTag.agentSDK.command(
               lpTag.agentSDK.cmdNames.write,
               commandData,
