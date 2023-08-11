@@ -91,7 +91,7 @@
     </div>
     <div id="data-container"></div>
 
-    <script src="https://lpcdn.lpsmedia.net/webagent/client-SDK.min.js"></script>
+    <!-- <script src="https://lpcdn.lpsmedia.net/webagent/client-SDK.min.js"></script> -->
     <script>
       const searchInput = document.getElementById("searchInput");
       const searchButton = document.getElementById("searchButton");
@@ -123,47 +123,37 @@
                         `;
             dataContainer.appendChild(postElement);
 
-            // var notificationHandler = function (data) {};
-            // var focusHandler = function () {};
-            // var blurHandler = function () {};
+            // {
+            //   var notificationHandler = function (data) {
+            //     // Do something with the notifications
+            //   };
 
+            //   var focusHandler = function () {
+            //     // Do something when the visitor is focused
+            //     // Assume the visitor is focused to begin with
+            //   };
+
+            //   var blurHandler = function () {
+            //     // Do something when the visitor is blurred
+            //     // Assume the visitor is focused to begin with
+            //   };
+            // }
             // lpTag.agentSDK.init({
             //   notificationCallback: notificationHandler,
             //   visitorFocusedCallback: focusHandler,
             //   visitorBlurredCallback: blurHandler,
             // });
-
-            {
-              var notificationHandler = function (data) {
-                // Do something with the notifications
-              };
-
-              var focusHandler = function () {
-                // Do something when the visitor is focused
-                // Assume the visitor is focused to begin with
-              };
-
-              var blurHandler = function () {
-                // Do something when the visitor is blurred
-                // Assume the visitor is focused to begin with
-              };
-            }
-            lpTag.agentSDK.init({
-              notificationCallback: notificationHandler,
-              visitorFocusedCallback: focusHandler,
-              visitorBlurredCallback: blurHandler,
-            });
-            const notifyWhenDone = function (err) {
-              if (err) {
-                console.log("Error occured in notifyWhenDone: " + err);
-              }
-              const commandData = { text: "Title:" + post.Title };
-              lpTag.agentSDK.command(
-                lpTag.agentSDK.cmdNames.write,
-                commandData,
-                notifyWhenDone
-              );
-            };
+            // const notifyWhenDone = function (err) {
+            //   if (err) {
+            //     console.log("Error occured in notifyWhenDone: " + err);
+            //   }
+            //   const commandData = { text: "Title:" + post.Title };
+            //   lpTag.agentSDK.command(
+            //     lpTag.agentSDK.cmdNames.write,
+            //     commandData,
+            //     notifyWhenDone
+            //   );
+            // };
           })
           .catch((error) => {
             console.error("Error fetching data:", error);
