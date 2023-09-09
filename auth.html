@@ -308,40 +308,7 @@
       lpTag.identities.push(identityfn);
 
       function identityfn(callback) {
-        var jwtObj1 = [
-          {
-            header: {
-              alg: "RS256",
-              typ: "JWT",
-            },
-          },
-          {
-            payload: {
-              sub: "1234567890",
-              iss: "https://lpexercise.000webhostapp.com/auth.html",
-              acr: "loa1",
-            },
-          },
-        ];
-        /*
-          callback({
-          "iss": "https://lpbrandweb.000webhostapp.com/special.html",
-          "acr":"loa1",
-          "sub": "1234567890"
-        });
-
-        */
-
-        var obj2 = {
-          sub: "+972-3-5555-555",
-          iss: "https://jwt.io",
-          aud: "acc:qa57221676",
-          exp: 2034971930,
-          iat: 1471899942,
-          given_name: "Eitan",
-          acr: "loa1",
-        };
-
+ 
         callback({
           sub: "+972-3-5555-555",
           iss: "https://jwt.io",
